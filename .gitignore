@@ -1,0 +1,67 @@
+# ==========================================
+# Website Kelurahan Tambunan - Git Ignore
+# ==========================================
+
+# ---------- Environment / Secrets ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# ---------- OS / File Manager ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- IDE / Editor ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------- Logs / Temporary files ----------
+*.log
+logs/
+tmp/
+temp/
+cache/
+
+# ---------- PHP / Local development ----------
+vendor/
+.phpunit.result.cache
+
+# XAMPP / local database backup
+mysql/
+xampp/
+*.sql.bak
+*.sql.tmp
+
+# ---------- Runtime uploaded files ----------
+# Foto yang di-upload melalui dashboard admin
+# tetap abaikan file hasil upload, tetapi pertahankan foldernya.
+assets/images/hero/*
+assets/images/potensi/*
+assets/images/galeri/*
+assets/files/buku-saku/*
+
+# Keep placeholder files so empty folders exist after clone
+!assets/images/hero/.gitkeep
+!assets/images/potensi/.gitkeep
+!assets/images/galeri/.gitkeep
+!assets/files/buku-saku/.gitkeep
+
+# ---------- Generated / backup files ----------
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+*.temp
+
+# ---------- Local database / dumps ----------
+*.dump
+*.sqlite
+*.sqlite3

@@ -1,0 +1,14 @@
+# =========================================================
+# .htaccess — Keamanan Dasar Website Kelurahan Tambunan
+# =========================================================
+
+# Matikan directory listing (orang tidak bisa lihat daftar file di folder tanpa index)
+Options -Indexes
+
+# Sembunyikan versi Apache/PHP dari header (kalau server izinkan)
+ServerSignature Off
+
+# Blokir akses langsung ke file .sql, .md, .log, .env dari browser
+<FilesMatch "\.(sql|md|log|env|ini)$">
+    Require all denied
+</FilesMatch>
